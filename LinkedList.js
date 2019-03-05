@@ -1,14 +1,13 @@
+let root = null;
+class LinkedList {
+  constructor(val){
+    this.data = val;
+    this.prev = null;
+    this.next = null;
+  }
+};
 
-  let root = null;
-  function LinkedList(val) {
-  return {
-    prev: null,
-    next: null,
-    data: val
-  };
-  };
-
-  function deleteItem(value) {
+function deleteItem(value) {
   let linkedList = root;
   let prev = null;
   while(linkedList) {
@@ -23,9 +22,9 @@
     prev = linkedList;
     linkedList = linkedList.next;
   }
-  }
+}
 
-  function callLinkedList() {
+function callLinkedList() {
   let current = null;
   const ll = [1,2,3,4,5,6];
   for(const i of ll) {
@@ -39,8 +38,6 @@
     }
   }
   deleteItem(9);
-    console.log(root);
-  }
-
-
-  callLinkedList();
+  console.log(root);
+}
+callLinkedList();
